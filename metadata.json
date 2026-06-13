@@ -1,0 +1,6 @@
+{
+  "name": "MetaChat",
+  "description": "MetaChat - Una aplicación de mensajería real y funcional inspirada en GBWhatsApp",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
