@@ -18,6 +18,11 @@ workflows:
       - name: Set up local.properties
         script: | 
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+      - name: Restore debug.keystore
+        script: |
+          if [ -f debug.keystore.base64 ]; then
+            openssl base64 -d -in debug.keystore.base64 -out debug.keystore
+          fi
       - name: Regenerate Gradle Wrapper
         script: |
           gradle wrapper --gradle-version 9.3.1
