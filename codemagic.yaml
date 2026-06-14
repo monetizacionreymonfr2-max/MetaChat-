@@ -18,6 +18,9 @@ workflows:
       - name: Set up local.properties
         script: | 
           echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+      - name: Regenerate Gradle Wrapper
+        script: |
+          gradle wrapper --gradle-version 9.3.1
       - name: Build Android APK
         script: | 
           chmod +x gradlew
